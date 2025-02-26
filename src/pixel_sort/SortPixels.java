@@ -92,8 +92,8 @@ public class SortPixels {
 
             exec.shutdown();
 
-            if(!exec.awaitTermination(15, TimeUnit.SECONDS)){
-                System.out.println("Image could not be sorted in 15 seconds!");
+            if(!exec.awaitTermination(20, TimeUnit.SECONDS)){
+                System.out.println("Image could not be sorted in 20 seconds!");
                 exec.shutdownNow();
             }
             ImageIO.write(img, extention, new File(folder + sep + renameTo + "." + extention));
@@ -127,8 +127,8 @@ public class SortPixels {
             exec.shutdown();
 
             
-                if(!exec.awaitTermination(15, TimeUnit.SECONDS)){
-                    System.out.println(" Sorting this image takes more than 15 seconds");
+                if(!exec.awaitTermination(20, TimeUnit.SECONDS)){
+                    System.out.println(" Sorting this image takes more than 20 seconds");
                 }
             ImageIO.write(image, extention, new File(folder + sep + renameTo + "." + extention));
         }catch(IOException | InterruptedException ex){
