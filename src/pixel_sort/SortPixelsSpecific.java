@@ -7,8 +7,15 @@ import javax.imageio.ImageIO;
 
 
 public class SortPixelsSpecific {
-        public static String sep = File.separator;
-    public static String folder = "C:" + sep + "Users" + sep + "Toms" + sep + "Desktop" + sep + "ImageEXPERIMENTS";
+
+public String folder;
+//Instantiate object of this class with that path to a folder containing the image
+public SortPixelsSpecific(String folder){
+    this.folder = folder;
+}
+
+public static String sep = File.separator;
+
 
     public void sortSpecPixelsH(String fileName, String extention, String renameTo, int redLow, int greenLow, int blueLow, int redTop, int greenTop, int blueTop){
         File file = new File(folder + sep + fileName + "." + extention);
