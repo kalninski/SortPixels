@@ -40,7 +40,7 @@ public class SortPixelsThreadsHorizontal {
 
     }
 
-    public static class ThreadFunctions extends Thread{
+    public class ThreadFunctions extends Thread{
         public BufferedImage image;
         public int rowY;
 
